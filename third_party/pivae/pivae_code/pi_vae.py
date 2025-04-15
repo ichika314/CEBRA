@@ -265,7 +265,7 @@ def custom_data_generator(x_all, u_one_hot):
             
 ## simulate data
 def realnvp_layer(x_input):
-    DD = x_input.shape.as_list()[-1]; ## DD needs to be an even number
+    DD = list(x_input.shape)[-1]; ## DD needs to be an even number
     dd = (DD//2);
     
     ## define some lambda functions
