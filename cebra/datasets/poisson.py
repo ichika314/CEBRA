@@ -168,6 +168,7 @@ class PoissonNeuron:
 
     def _get_counts(self, refractory_period: float = 0.0):
         """Estimate spike counts by sampling individual spikes"""
+        print("-------processing-------")
         max_spike_count = self._expected_count
         deltas = scipy.stats.expon(scale=1.0 / self.spike_rate).rvs(
             (self.num_repeats, max_spike_count))
